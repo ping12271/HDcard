@@ -1,0 +1,71 @@
+html, body {height:100%;}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    word-break: keep-all;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.container-sm {
+    width: 1056px;
+    margin: 0 auto;
+}
+
+.blind {position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;}
+
+//slick 슬라이드 공통요소
+.slideshow {
+    position: relative;
+    .slick-dots {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        li {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #ddd;
+            margin: 0 5px;
+            &.slick-active {
+                background: #08c;
+            }
+            button {
+                display: none;
+            }
+        }
+    }
+}
+
+.back-top {
+    position: fixed;
+    bottom: -50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #d5d3d3;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .show-backtop & {
+        bottom: 50px;
+        transition: 0.5s;
+    }
+}
+
+
