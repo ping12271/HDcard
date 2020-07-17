@@ -83,13 +83,16 @@
               }
             }
             .nav-link {
+              position: relative;
+              top: 1px;
               display: flex;
               align-items: center;
               height: 72px;
               color: #000;
-              font-size: 14px;
+              font-size: 13px;
               font-weight: 400;
               padding: 0 13px;
+              border-bottom: 1px solid transparent;
               &:hover {
                 color: #0088cc;
                 border-bottom: 1px solid #0088cc;
@@ -109,10 +112,8 @@
                 padding: 30px 15px;
                 .thumb {
                   margin-right: 100px;
-
                   .nav-slideshow {
                     width: 206px;
-
                     .slick-dots li {
                       display: none;
                     }
@@ -123,41 +124,34 @@
                     line-height: 1.5;
                     padding: 15px 0;
                   }
-
                   a {
                     color: #888;
-
                     &:hover {
                       color: #0088cc;
                     }
                   }
                 }
-
                 .dropdown-menu {
                   border-right: 1px solid #d5d3d3;
                   &.item5 {
                     border: none;
                   }
-
                   h6 {
                     font-weight: 600;
                     color: #000;
                     font-size: 13px;
                     padding: 5px 20px;
                   }
-
                   ul {
                     li {
                       &:last-child {
                         padding-bottom: 20px;
                       }
-
                       a {
                         display: flex;
                         color: #888;
                         padding: 5px 20px;
                         font-size: 13px;
-
                         &:hover {
                           color: #0088cc;
                         }
@@ -170,12 +164,10 @@
               .dropdown-menu.v2 {
                 &.item1 {
                   display: flex;
-
                   ul {
                     &:not(.fix) {
                       margin-top: 22px;
                     }
-
                     .tit {
                       color: #000;
                       padding: 15px 20px 0 20px;
@@ -183,7 +175,6 @@
                     }
                   }
                 }
-
                 &.item3 {
                   border-right: none;
                 }
@@ -206,4 +197,3 @@
     }
   }
 }
-

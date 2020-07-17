@@ -11,28 +11,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   h1 {
     font-size: 20px;
   }
+
   .get-scroll & {
     top: 0;
   }
+
   &.on {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
+
     h1 {
       color: #000;
     }
   }
 }
+
 .visual {
-  position: relative;
-  top: -50px;
+  margin-top: -45px;
+
   .visual-slideshow {
     .item {
       background-position: center;
       background-size: cover;
       height: 100vh;
+
       .desc {
         color: #fff;
         height: 100vh;
@@ -46,11 +52,14 @@
           font-size: 55px;
           line-height: 1.2;
           margin-bottom: 20px;
+          opacity: 0;
         }
 
         p {
           font-size: 20px;
           line-height: 1.5;
+          opacity: 0;
+          animation-delay: 0.2s
         }
 
         .btn {
@@ -63,8 +72,27 @@
           color: #333;
           border-radius: 3px;
           margin-top: 30px;
+          opacity: 0;
+          animation-delay: 0.2s
         }
       }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .fadeInUp {
+      animation-name: fadeInUp;
+      animation-duration: 0.6s;
+      animation-fill-mode: both;
     }
 
     .img1 {
@@ -113,6 +141,7 @@
 
 .culturelife {
   padding-top: 50px;
+
   .container-sm {
     width: 1056px;
     margin: 0 auto;

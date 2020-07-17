@@ -89,23 +89,8 @@
           font-size: 20px;
         }
       }
-      .dropdown {
+      .site {
         position: relative;
-        .fa-caret-down {
-          display: none;
-        }
-        &:hover {
-          background-color: #fff;
-          .item {
-            display: block;
-          }
-          .fa-caret-down {
-            display: block;
-          }
-          .fa-caret-up {
-            display: none;
-          }
-        }
         .name {
           width: 120px;
           background-color: rgba(201, 201, 201, 0.11);
@@ -114,8 +99,20 @@
           display: flex;
           justify-content: space-between;
           cursor: pointer;
+          .fa-caret-down {
+            display: none;
+            &.active {
+              display: block;
+            }
+          }
+          .fa-caret-up {
+            &.active {
+              display: none;
+            }
+          }
         }
-        .item {
+
+        .dropdown {
           position: absolute;
           bottom: 100%;
           width: 240px;
@@ -128,6 +125,10 @@
             &:hover {
               color: #0088cc;
             }
+          }
+          &.active {
+            display: block;
+            transition: .5s;
           }
         }
       }
