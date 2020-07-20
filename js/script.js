@@ -3,9 +3,9 @@ $(function () {
 })
 var hyundaicard = {
     init: function () {
-        hyundaicard.slideShow();
-        hyundaicard.fadeSlideshow();
-        hyundaicard.navSlideshow();
+        hyundaicard.slide();
+        hyundaicard.fadeSlide();
+        hyundaicard.navSlide();
         hyundaicard.getScroll();
         hyundaicard.toggleClass();
         hyundaicard.handleInfo();
@@ -13,10 +13,10 @@ var hyundaicard = {
         hyundaicard.tabMenu();
     },
 
-    slideShow: function () {
+    slide: function () {
         $('.card-slideshow').slick({
             autoplay: true,
-            speed: 1000,
+            speed: 2000,
             slidesToShow: 3,
             slidesToScroll: 3,
             arrows: false,
@@ -24,12 +24,13 @@ var hyundaicard = {
         });
     },
 
-    fadeSlideshow: function () {
+    fadeSlide: function () {
         $('.nav-slideshow,.visual-slideshow, .bank-slideshow,.culture-slideshow,.digital-slideshow,.event-slideshow').slick({
             dots: true,
             arrows: false,
             infinite: true,
-            speed: 500,
+            autoplay: true,
+            speed: 1000,
             fade: true,
         });
         $('.notice-slideshow').slick({
@@ -67,7 +68,7 @@ var hyundaicard = {
         slickCustomEvent.init()
     },
 
-    navSlideshow: function () {
+    navSlide: function () {
         $('.gallery-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -142,7 +143,7 @@ var hyundaicard = {
     },
 
     tabMenu: function () {
-        $('.faq-menu li').on('click', function () {
+        $('.section-faq.menu li').on('click', function () {
             $(this).children('a').addClass('is_active');
             $(this).siblings().children('a').removeClass('is_active');
             const index = $(this).index();

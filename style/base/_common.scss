@@ -17,11 +17,12 @@ body {
 
 
 //main-fade 슬라이드
+.card-slideshow,
 .slideshow {
     position: relative;
     .slick-dots {
         position: absolute;
-        bottom: 30px;
+        bottom: -20%;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -33,7 +34,7 @@ body {
             background: #ddd;
             margin: 0 5px;
             &.slick-active {
-                background: #08c;
+                background: #888;
             }
             button {
                 display: none;

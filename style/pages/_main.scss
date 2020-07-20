@@ -1,5 +1,7 @@
 main {
-  padding-top: 150px;
+  .container {
+    padding-top: 150px;
+  }
   .contents {
     display: flex;
     width: 100%;
@@ -170,25 +172,7 @@ main {
             }
           }
           .slick-dots {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            li {
-              width: 8px;
-              height: 8px;
-              border-radius: 50%;
-              background: #ddd;
-              margin: 0 5px;
-              &.slick-active {
-                background: #08c;
-              }
-              button {
-                display: none;
-              }
-            }
+            top: 97%;
           }
         }
       }
@@ -235,9 +219,6 @@ main {
       }
       .bank-slideshow {
         width: 220px;
-        .slick-dots {
-          bottom: -20px;
-        }
         .item {
           img {
             width: 100%;
@@ -344,10 +325,9 @@ main {
     }
     &.event {
       width: 274px;
-    }
-    //seconds-area 공통 slick
-    .slick-dots {
-      bottom: -20px;
+      img {
+        height: 135px;
+      }
     }
     .item {
       cursor: pointer;

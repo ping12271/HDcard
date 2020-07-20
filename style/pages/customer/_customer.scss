@@ -1,41 +1,31 @@
-.customer-faq-board {
-  margin-top: -45px;
+.section-customer.faq-board {
   background-color: #5698e0;
-  padding: 100px 0;
-
-  .faq-board-desc {
+  padding: 200px 0 100px 0;
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
     color: #fff;
-
-    h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      a {
-        color: #fff;
-        font-size: 21px;
-
-        &:hover {
-          border-bottom: 1px solid #fff;
-        }
+  }
+  h2 {
+    a {
+      color: #fff;
+      font-size: 21px;
+      &:hover {
+        border-bottom: 1px solid #fff;
       }
     }
   }
-
   .search {
     position: relative;
     top: -50px;
     display: flex;
     justify-content: center;
-
     input {
       width: 420px;
       height: 40px;
       padding: 5px;
     }
-
     .btn {
       width: 80px;
       height: 40px;
@@ -49,37 +39,30 @@
       margin-left: 10px;
     }
   }
-
-  ul.faq-items {
+  ul {
     margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
-
     li {
       flex: 1 1 20%;
       padding: 5px;
-
       .item {
         height: 130px;
         background-color: #fff;
         padding: 20px 30px;
-
         p.number {
           font-size: 13px;
           color: #888;
           margin-bottom: 7px;
         }
-
         p {
           font-size: 15px;
           color: #000;
           line-height: 1.5;
-
           em {
             color: #0088cc;
           }
         }
-
         &:hover {
           background-color: #5698e0;
           border: 1px solid #fff;
@@ -94,51 +77,42 @@
   }
 }
 
-.customer-question {
+.section-customer.question {
   padding-top: 50px;
-
   h2 {
     a {
       margin-bottom: 20px;
       font-size: 21px;
-
       &:hover {
         color: #0088cc;
       }
     }
   }
-
   ul {
     display: flex;
-
     li {
       flex: 1 1 25%;
       padding: 20px;
-
       .item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-
         i {
           font-size: 45px;
           color: #888;
         }
-
         a {
           display: flex;
           flex-direction: column;
           margin: 15px 0;
           font-size: 15px;
-
           &:hover {
             color: #0088cc;
             border-bottom: 1px solid #0088cc;
           }
         }
-
         p {
           line-height: 1.5;
           font-size: 13px;
@@ -149,25 +123,23 @@
   }
 }
 
-.customer {
+.section-customer.safe,
+.section-customer.licence,
+.section-customer.guide {
   padding-top: 50px;
-
   h3 {
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 10px;
   }
-
   ul {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -13px;
-
     li {
       flex: 1 1 25%;
       max-width: 25%;
       padding: 13px;
-
       .item {
         background-color: #fafafa;
         display: flex;
@@ -175,27 +147,22 @@
         justify-content: center;
         align-items: center;
         padding: 30px 15px;
-
         &:hover {
           background-color: #1e75d6;
           color: #fff;
           transition: .3s;
-
           i, h2, p {
             color: #fff;
           }
         }
-
         i {
           font-size: 45px;
           color: #888;
         }
-
         h2 {
           font-size: 21px;
           margin: 15px 0;
         }
-
         p {
           font-size: 13px;
           line-height: 1.8;
@@ -206,50 +173,44 @@
   }
 }
 
-.customer-news {
+.section-customer.news {
   padding: 50px 0;
-
   h2 {
     margin-bottom: 20px;
-
     a {
       font-size: 21px;
       margin: 15px 0;
-
       &:hover {
         color: #0088cc;
       }
     }
   }
-
   ul {
     border-top: 2px solid #555;
-
     li {
       border-bottom: 1px solid #d5d3d3;
-
       a {
         height: 53px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 70px;
+        font-size: 13px;
       }
+    }
+  }
+  .news-bar {
+    margin-top: 70px;
+    padding: 0 20px;
+    background-color: #1e75d6;
+    a {
+      height: 40px;
+      color: #fff;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }
 
-.customer-news-bar {
-  margin-top: 70px;
-  padding: 0 20px;
-  background-color: #1e75d6;
-
-  a {
-    height: 40px;
-    color: #fff;
-    font-size: 13px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}

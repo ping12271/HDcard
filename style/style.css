@@ -465,17 +465,20 @@ body {
   margin: 0 auto;
 }
 
+.card-slideshow,
 .slideshow {
   position: relative;
 }
+.card-slideshow .slick-dots,
 .slideshow .slick-dots {
   position: absolute;
-  bottom: 30px;
+  bottom: -20%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
 }
+.card-slideshow .slick-dots li,
 .slideshow .slick-dots li {
   width: 8px;
   height: 8px;
@@ -483,9 +486,11 @@ body {
   background: #ddd;
   margin: 0 5px;
 }
+.card-slideshow .slick-dots li.slick-active,
 .slideshow .slick-dots li.slick-active {
-  background: #08c;
+  background: #888;
 }
+.card-slideshow .slick-dots li button,
 .slideshow .slick-dots li button {
   display: none;
 }
@@ -829,7 +834,7 @@ body {
   padding: 10px;
 }
 
-main {
+main .container {
   padding-top: 150px;
 }
 main .contents {
@@ -1002,25 +1007,7 @@ main .contents .card-guide .card-application .card-slideshow .item p:hover {
   color: #0088cc;
 }
 main .contents .card-guide .card-application .card-slideshow .slick-dots {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-}
-main .contents .card-guide .card-application .card-slideshow .slick-dots li {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ddd;
-  margin: 0 5px;
-}
-main .contents .card-guide .card-application .card-slideshow .slick-dots li.slick-active {
-  background: #08c;
-}
-main .contents .card-guide .card-application .card-slideshow .slick-dots li button {
-  display: none;
+  top: 97%;
 }
 main .contents .card-guide .card-benefits {
   height: 283px;
@@ -1061,9 +1048,6 @@ main .contents .bank-guide h1 {
 }
 main .contents .bank-guide .bank-slideshow {
   width: 220px;
-}
-main .contents .bank-guide .bank-slideshow .slick-dots {
-  bottom: -20px;
 }
 main .contents .bank-guide .bank-slideshow .item img {
   width: 100%;
@@ -1159,8 +1143,8 @@ main .seconds-area.digital-project {
 main .seconds-area.event {
   width: 274px;
 }
-main .seconds-area .slick-dots {
-  bottom: -20px;
+main .seconds-area.event img {
+  height: 135px;
 }
 main .seconds-area .item {
   cursor: pointer;
@@ -1249,9 +1233,6 @@ main .notice-box .slide-container .item .tit:hover {
   color: #000;
 }
 
-.visual {
-  margin-top: -45px;
-}
 .visual .visual-slideshow .item {
   background-position: center;
   background-size: cover;
@@ -1338,52 +1319,55 @@ main .notice-box .slide-container .item .tit:hover {
 .visual .visual-slideshow .img7 {
   background-image: url("../images/visual_life_main_6.jpg");
 }
-
-.culturelife {
-  padding-top: 50px;
+.visual .visual-slideshow .slick-dots {
+  bottom: 10%;
 }
-.culturelife .container-sm {
+
+.section-culture {
+  padding-top: 100px;
+}
+.section-culture .container-sm {
   width: 1056px;
   margin: 0 auto;
 }
-.culturelife.design {
-  padding-bottom: 70px;
-}
-.culturelife .title {
+.section-culture .title {
   text-align: center;
   margin-bottom: 20px;
 }
-.culturelife .title h3 {
+.section-culture .title h3 {
   font-size: 16px;
   margin-bottom: 20px;
 }
-.culturelife .title p {
+.section-culture .title p {
   font-size: 21px;
 }
-.culturelife ul {
+.section-culture ul {
   display: flex;
   flex-wrap: wrap;
 }
-.culturelife ul li {
+.section-culture ul li {
   flex: 1 1 33.3333%;
   max-width: 33.3333%;
   padding: 15px;
 }
-.culturelife .item img {
+.section-culture .item img {
   width: 328px;
 }
-.culturelife .item a p.tit {
+.section-culture .item a p.tit {
   font-size: 15px;
   color: #000;
   margin-top: 15px;
 }
-.culturelife .item a p {
+.section-culture .item a p {
   color: #777;
   font-size: 13px;
   margin-top: 10px;
 }
-.culturelife .item a:hover .tit {
+.section-culture .item a:hover .tit {
   color: #0088cc;
+}
+.section-culture.design {
+  padding-bottom: 100px;
 }
 
 .page-nav {
@@ -1463,101 +1447,99 @@ main .notice-box .slide-container .item .tit:hover {
 .cooking-slide .gallery .gallery-nav .slick-list .slick-track > div {
   padding: 10px;
 }
-.cooking-slide .contents {
+
+.cooking-contents {
   padding: 100px 0;
 }
-.cooking-slide .contents .intro h2, .cooking-slide .contents .guide h2 {
+.cooking-contents .intro h2, .cooking-contents .guide h2 {
   font-size: 21px;
   border-bottom: 2px solid #000;
   padding-bottom: 20px;
 }
-.cooking-slide .contents .intro .description, .cooking-slide .contents .guide .description {
+.cooking-contents .intro .description, .cooking-contents .guide .description {
   display: flex;
   padding: 20px 0;
   border-bottom: 1px solid #d5d3d3;
 }
-.cooking-slide .contents .intro .description p.tit, .cooking-slide .contents .guide .description p.tit {
+.cooking-contents .intro .description p.tit, .cooking-contents .guide .description p.tit {
   flex: 1 1 30%;
   font-size: 15px;
   color: #000;
 }
-.cooking-slide .contents .intro .description p, .cooking-slide .contents .guide .description p {
+.cooking-contents .intro .description p, .cooking-contents .guide .description p {
   flex: 1 1 70%;
   font-size: 14px;
   color: #888;
   line-height: 1.8;
 }
-.cooking-slide .contents .intro.guide, .cooking-slide .contents .guide.guide {
+.cooking-contents .intro.guide, .cooking-contents .guide.guide {
   padding: 50px 0;
 }
-.cooking-slide .contents .intro.guide span, .cooking-slide .contents .guide.guide span {
+.cooking-contents .intro.guide span, .cooking-contents .guide.guide span {
   display: block;
   padding: 15px 0;
 }
-.cooking-slide .contents .intro.guide .last, .cooking-slide .contents .guide.guide .last {
+.cooking-contents .intro.guide .last, .cooking-contents .guide.guide .last {
   border: none;
 }
-.cooking-slide .contents .intro.guide > div, .cooking-slide .contents .guide.guide > div {
+.cooking-contents .intro.guide > div, .cooking-contents .guide.guide > div {
   padding-bottom: 20px;
   border-bottom: 1px solid #d5d3d3;
 }
-.cooking-slide .contents .intro.guide > div img, .cooking-slide .contents .guide.guide > div img {
+.cooking-contents .intro.guide > div img, .cooking-contents .guide.guide > div img {
   margin-left: 400px;
 }
-.cooking-slide .contents .banner {
+.cooking-contents .banner {
   border: 1px solid #d5d3d3;
   padding: 43px 54px;
 }
-.cooking-slide .contents .banner p.tit {
+.cooking-contents .banner p.tit {
   font-size: 15px;
   color: #000;
   margin-top: 0;
 }
-.cooking-slide .contents .banner p {
+.cooking-contents .banner p {
   font-size: 14px;
   color: #888;
   margin: 20px 0;
 }
-.cooking-slide .contents .banner a {
+.cooking-contents .banner a {
   color: #0088cc;
   font-size: 13px;
 }
-.cooking-slide .contents .banner a:hover {
+.cooking-contents .banner a:hover {
   border-bottom: 1px solid #0088cc;
 }
 
-.customer-faq-board {
-  margin-top: -45px;
+.section-customer.faq-board {
   background-color: #5698e0;
-  padding: 100px 0;
+  padding: 200px 0 100px 0;
 }
-.customer-faq-board .faq-board-desc {
-  color: #fff;
-}
-.customer-faq-board .faq-board-desc h3 {
+.section-customer.faq-board h3 {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #fff;
 }
-.customer-faq-board .faq-board-desc h2 a {
+.section-customer.faq-board h2 a {
   color: #fff;
   font-size: 21px;
 }
-.customer-faq-board .faq-board-desc h2 a:hover {
+.section-customer.faq-board h2 a:hover {
   border-bottom: 1px solid #fff;
 }
-.customer-faq-board .search {
+.section-customer.faq-board .search {
   position: relative;
   top: -50px;
   display: flex;
   justify-content: center;
 }
-.customer-faq-board .search input {
+.section-customer.faq-board .search input {
   width: 420px;
   height: 40px;
   padding: 5px;
 }
-.customer-faq-board .search .btn {
+.section-customer.faq-board .search .btn {
   width: 80px;
   height: 40px;
   background-color: #fff;
@@ -1569,105 +1551,115 @@ main .notice-box .slide-container .item .tit:hover {
   font-size: 13px;
   margin-left: 10px;
 }
-.customer-faq-board ul.faq-items {
+.section-customer.faq-board ul {
   margin-top: 25px;
   display: flex;
   flex-wrap: wrap;
 }
-.customer-faq-board ul.faq-items li {
+.section-customer.faq-board ul li {
   flex: 1 1 20%;
   padding: 5px;
 }
-.customer-faq-board ul.faq-items li .item {
+.section-customer.faq-board ul li .item {
   height: 130px;
   background-color: #fff;
   padding: 20px 30px;
 }
-.customer-faq-board ul.faq-items li .item p.number {
+.section-customer.faq-board ul li .item p.number {
   font-size: 13px;
   color: #888;
   margin-bottom: 7px;
 }
-.customer-faq-board ul.faq-items li .item p {
+.section-customer.faq-board ul li .item p {
   font-size: 15px;
   color: #000;
   line-height: 1.5;
 }
-.customer-faq-board ul.faq-items li .item p em {
+.section-customer.faq-board ul li .item p em {
   color: #0088cc;
 }
-.customer-faq-board ul.faq-items li .item:hover {
+.section-customer.faq-board ul li .item:hover {
   background-color: #5698e0;
   border: 1px solid #fff;
   transition: 0.3s;
 }
-.customer-faq-board ul.faq-items li .item:hover p, .customer-faq-board ul.faq-items li .item:hover em {
+.section-customer.faq-board ul li .item:hover p, .section-customer.faq-board ul li .item:hover em {
   color: #fff;
 }
 
-.customer-question {
+.section-customer.question {
   padding-top: 50px;
 }
-.customer-question h2 a {
+.section-customer.question h2 a {
   margin-bottom: 20px;
   font-size: 21px;
 }
-.customer-question h2 a:hover {
+.section-customer.question h2 a:hover {
   color: #0088cc;
 }
-.customer-question ul {
+.section-customer.question ul {
   display: flex;
 }
-.customer-question ul li {
+.section-customer.question ul li {
   flex: 1 1 25%;
   padding: 20px;
 }
-.customer-question ul li .item {
+.section-customer.question ul li .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.customer-question ul li .item i {
+.section-customer.question ul li .item i {
   font-size: 45px;
   color: #888;
 }
-.customer-question ul li .item a {
+.section-customer.question ul li .item a {
   display: flex;
   flex-direction: column;
   margin: 15px 0;
   font-size: 15px;
 }
-.customer-question ul li .item a:hover {
+.section-customer.question ul li .item a:hover {
   color: #0088cc;
   border-bottom: 1px solid #0088cc;
 }
-.customer-question ul li .item p {
+.section-customer.question ul li .item p {
   line-height: 1.5;
   font-size: 13px;
   color: #888;
 }
 
-.customer {
+.section-customer.safe,
+.section-customer.licence,
+.section-customer.guide {
   padding-top: 50px;
 }
-.customer h3 {
+.section-customer.safe h3,
+.section-customer.licence h3,
+.section-customer.guide h3 {
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
 }
-.customer ul {
+.section-customer.safe ul,
+.section-customer.licence ul,
+.section-customer.guide ul {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -13px;
 }
-.customer ul li {
+.section-customer.safe ul li,
+.section-customer.licence ul li,
+.section-customer.guide ul li {
   flex: 1 1 25%;
   max-width: 25%;
   padding: 13px;
 }
-.customer ul li .item {
+.section-customer.safe ul li .item,
+.section-customer.licence ul li .item,
+.section-customer.guide ul li .item {
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
@@ -1675,71 +1667,81 @@ main .notice-box .slide-container .item .tit:hover {
   align-items: center;
   padding: 30px 15px;
 }
-.customer ul li .item:hover {
+.section-customer.safe ul li .item:hover,
+.section-customer.licence ul li .item:hover,
+.section-customer.guide ul li .item:hover {
   background-color: #1e75d6;
   color: #fff;
   transition: 0.3s;
 }
-.customer ul li .item:hover i, .customer ul li .item:hover h2, .customer ul li .item:hover p {
+.section-customer.safe ul li .item:hover i, .section-customer.safe ul li .item:hover h2, .section-customer.safe ul li .item:hover p,
+.section-customer.licence ul li .item:hover i,
+.section-customer.licence ul li .item:hover h2,
+.section-customer.licence ul li .item:hover p,
+.section-customer.guide ul li .item:hover i,
+.section-customer.guide ul li .item:hover h2,
+.section-customer.guide ul li .item:hover p {
   color: #fff;
 }
-.customer ul li .item i {
+.section-customer.safe ul li .item i,
+.section-customer.licence ul li .item i,
+.section-customer.guide ul li .item i {
   font-size: 45px;
   color: #888;
 }
-.customer ul li .item h2 {
+.section-customer.safe ul li .item h2,
+.section-customer.licence ul li .item h2,
+.section-customer.guide ul li .item h2 {
   font-size: 21px;
   margin: 15px 0;
 }
-.customer ul li .item p {
+.section-customer.safe ul li .item p,
+.section-customer.licence ul li .item p,
+.section-customer.guide ul li .item p {
   font-size: 13px;
   line-height: 1.8;
   color: #888;
 }
 
-.customer-news {
+.section-customer.news {
   padding: 50px 0;
 }
-.customer-news h2 {
+.section-customer.news h2 {
   margin-bottom: 20px;
 }
-.customer-news h2 a {
+.section-customer.news h2 a {
   font-size: 21px;
   margin: 15px 0;
 }
-.customer-news h2 a:hover {
+.section-customer.news h2 a:hover {
   color: #0088cc;
 }
-.customer-news ul {
+.section-customer.news ul {
   border-top: 2px solid #555;
 }
-.customer-news ul li {
+.section-customer.news ul li {
   border-bottom: 1px solid #d5d3d3;
 }
-.customer-news ul li a {
+.section-customer.news ul li a {
   height: 53px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 70px;
+  font-size: 13px;
 }
-
-.customer-news-bar {
+.section-customer.news .news-bar {
   margin-top: 70px;
   padding: 0 20px;
   background-color: #1e75d6;
 }
-.customer-news-bar a {
+.section-customer.news .news-bar a {
   height: 40px;
   color: #fff;
   font-size: 13px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.customer-pages-faq {
-  padding: 44px 0 90px 0;
 }
 
 .page-nav {
@@ -1774,16 +1776,19 @@ main .notice-box .slide-container .item .tit:hover {
   color: #666;
 }
 
-.description {
+.section-faq.title {
+  padding-top: 200px;
+}
+.section-faq.title .description {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.description h1 {
+.section-faq.title .description h1 {
   font-size: 30px;
   margin-bottom: 10px;
 }
-.get-scroll .description h1 {
+.get-scroll .section-faq.title .description h1 {
   font-size: 20px;
   position: fixed;
   z-index: 100;
@@ -1791,14 +1796,14 @@ main .notice-box .slide-container .item .tit:hover {
   left: 50%;
   transform: translateX(-50%);
 }
-.description .search {
+.section-faq.title .description .search {
   display: flex;
   margin-top: 30px;
 }
-.description .search input {
+.section-faq.title .description .search input {
   width: 400px;
 }
-.description .search .btn {
+.section-faq.title .description .search .btn {
   width: 80px;
   height: 40px;
   background-color: #1e75d6;
@@ -1811,22 +1816,22 @@ main .notice-box .slide-container .item .tit:hover {
   cursor: pointer;
 }
 
-.faq-menu {
+.section-faq.menu {
   margin-top: 40px;
 }
-.faq-menu ul {
+.section-faq.menu ul {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid #d5d3d3;
   border-bottom: none;
   border-left: none;
 }
-.faq-menu ul li {
+.section-faq.menu ul li {
   height: 48px;
   flex: 1 1 20%;
   max-width: 20%;
 }
-.faq-menu ul li a {
+.section-faq.menu ul li a {
   height: 48px;
   display: flex;
   justify-content: center;
@@ -1835,34 +1840,34 @@ main .notice-box .slide-container .item .tit:hover {
   border-top: none;
   border-right: none;
 }
-.faq-menu ul li a:hover {
+.section-faq.menu ul li a:hover {
   background-color: #f0f0f0;
   color: #1e75d6;
 }
-.faq-menu ul li a.is_active {
+.section-faq.menu ul li a.is_active {
   background-color: #1e75d6;
   color: #fff;
 }
 
-.faq-board {
+.section-faq.faq-board {
   margin: 10px 0;
 }
-.faq-board.item2 {
+.section-faq.faq-board.item2 {
   display: none;
 }
-.faq-board .links {
+.section-faq.faq-board .links {
   position: relative;
   margin-bottom: 30px;
 }
-.faq-board .links a {
+.section-faq.faq-board .links a {
   font-size: 15px;
   margin-right: 20px;
 }
-.faq-board .links a:hover, .faq-board .links a.is_active {
+.section-faq.faq-board .links a:hover, .section-faq.faq-board .links a.is_active {
   color: #0088cc;
   text-decoration: underline;
 }
-.faq-board .links a:after {
+.section-faq.faq-board .links a:after {
   content: "";
   width: 1px;
   height: 15px;
@@ -1871,24 +1876,24 @@ main .notice-box .slide-container .item .tit:hover {
   top: 1px;
   margin-left: 10px;
 }
-.faq-board .links a:last-child:after {
+.section-faq.faq-board .links a:last-child:after {
   display: none;
 }
-.faq-board h2 {
+.section-faq.faq-board h2 {
   font-size: 21px;
   margin-bottom: 15px;
 }
-.faq-board h2.is_active {
+.section-faq.faq-board h2.is_active {
   text-decoration: underline;
   color: #0088cc;
 }
-.faq-board ul {
+.section-faq.faq-board ul {
   border-top: 2px solid #666;
 }
-.faq-board ul li {
+.section-faq.faq-board ul li {
   border-bottom: 1px solid #d5d3d3;
 }
-.faq-board ul li .answer {
+.section-faq.faq-board ul li .answer {
   background-color: #fafafa;
   padding: 35px 50px;
   display: none;
@@ -1896,7 +1901,7 @@ main .notice-box .slide-container .item .tit:hover {
   color: #666;
   font-size: 15px;
 }
-.faq-board ul li .que {
+.section-faq.faq-board ul li .que {
   height: 53px;
   display: flex;
   justify-content: space-between;
@@ -1904,42 +1909,42 @@ main .notice-box .slide-container .item .tit:hover {
   padding: 0 50px;
   cursor: pointer;
 }
-.faq-board ul li .que .icon {
+.section-faq.faq-board ul li .que .icon {
   border: 1px solid #d5d3d3;
   padding: 2px 4px;
 }
-.faq-board ul li .que .icon i {
+.section-faq.faq-board ul li .que .icon i {
   color: #666;
   font-weight: 600;
 }
-.faq-board ul li .que .icon.show .fa-angle-down {
+.section-faq.faq-board ul li .que .icon.show .fa-angle-down {
   display: block;
   color: #0088cc;
 }
-.faq-board ul li .que .icon.show .fa-angle-up {
+.section-faq.faq-board ul li .que .icon.show .fa-angle-up {
   display: none;
 }
-.faq-board ul li .que .fa-angle-down {
+.section-faq.faq-board ul li .que .fa-angle-down {
   display: none;
 }
-.faq-board ul li.more {
+.section-faq.faq-board ul li.more {
   display: none;
 }
-.faq-board ul li.more.active {
+.section-faq.faq-board ul li.more.active {
   display: block;
 }
-.faq-board ul li.more-btn {
+.section-faq.faq-board ul li.more-btn {
   font-size: 13px;
   text-align: center;
   padding: 10px;
   color: #1e75d6;
   cursor: pointer;
 }
-.faq-board ul li.more-btn i {
+.section-faq.faq-board ul li.more-btn i {
   font-weight: 600;
   font-size: 15px;
 }
-.faq-board ul li.more-btn.active {
+.section-faq.faq-board ul li.more-btn.active {
   display: none;
 }
 
