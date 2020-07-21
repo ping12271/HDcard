@@ -108,8 +108,7 @@ var hyundaicard = {
         $(window).on('scroll', function () {
             const scrollTop = $(window).scrollTop();
             const offset = $('.title-trigger').offset();
-            const point = offset.top();
-            console.log();
+            const point = offset.top;
             if (scrollTop > point) {
                 $('.page-title').addClass('on');
             } else {
