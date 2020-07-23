@@ -25,6 +25,29 @@ var hyundaicard = {
     },
 
     fadeSlide: function () {
+        var slickCustomEvent = {
+            init : function(){
+                slickCustomEvent.initialize()
+                slickCustomEvent.beforeChange()
+                slickCustomEvent.afterChange()
+            },
+            initialize : function(){
+                var dataIndex = $('[data-slick-index="0"]');
+                dataIndex.find('h2,p,.btn').addClass('fadeInUp');
+            },
+            beforeChange : function(){
+                $('.visual-slideshow').on('beforeChange', function(event, slick, currentSlide){
+                    $('h2,p,.btn').removeClass('fadeInUp');
+                })
+            },
+            afterChange : function(){
+                $('.visual-slideshow').on('afterChange', function(event, slick, currentSlide){
+                    var dataIndex = $('[data-slick-index="' + currentSlide + '"');
+                    dataIndex.find('h2,p,.btn').addClass('fadeInUp');
+                });
+            }
+        }
+        slickCustomEvent.init()
         $('.nav-slideshow,.visual-slideshow, .bank-slideshow,.culture-slideshow,.digital-slideshow,.event-slideshow').slick({
             dots: true,
             arrows: false,
@@ -43,29 +66,6 @@ var hyundaicard = {
             prevArrow: $('.slick-prev'),
             nextArrow: $('.slick-next'),
         });
-        var slickCustomEvent = {
-            init : function(){
-                slickCustomEvent.initialize()
-                slickCustomEvent.beforeChange()
-                slickCustomEvent.afterChange()
-            },
-            initialize : function(){
-                var dataIndex = $('[data-slick-index="0"');
-                dataIndex.find('h2,p,.btn').addClass('fadeInUp');
-            },
-            beforeChange : function(){
-                $('.visual-slideshow').on('beforeChange', function(event, slick, currentSlide){
-                    $('h2,p,.btn').removeClass('fadeInUp');
-                })
-            },
-            afterChange : function(){
-                $('.visual-slideshow').on('afterChange', function(event, slick, currentSlide){
-                    var dataIndex = $('[data-slick-index="' + currentSlide + '"');
-                    dataIndex.find('h2,p,.btn').addClass('fadeInUp');
-                });
-            }
-        }
-        slickCustomEvent.init()
     },
 
     navSlide: function () {
