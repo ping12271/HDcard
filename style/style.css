@@ -465,11 +465,9 @@ body {
   margin: 0 auto;
 }
 
-.card-slideshow,
 .slideshow {
   position: relative;
 }
-.card-slideshow .slick-dots,
 .slideshow .slick-dots {
   position: absolute;
   bottom: -20%;
@@ -478,7 +476,6 @@ body {
   display: flex;
   justify-content: center;
 }
-.card-slideshow .slick-dots li,
 .slideshow .slick-dots li {
   width: 8px;
   height: 8px;
@@ -486,11 +483,9 @@ body {
   background: #ddd;
   margin: 0 5px;
 }
-.card-slideshow .slick-dots li.slick-active,
 .slideshow .slick-dots li.slick-active {
   background: #888;
 }
-.card-slideshow .slick-dots li button,
 .slideshow .slick-dots li button {
   display: none;
 }
@@ -626,10 +621,10 @@ body {
   flex: 1;
   margin-right: 50px;
 }
-#header .main-header .gnb nav .nav-items .nav-item .dropdown .thumb .nav-slideshow {
+#header .main-header .gnb nav .nav-items .nav-item .dropdown .thumb .nav-slide {
   width: 206px;
 }
-#header .main-header .gnb nav .nav-items .nav-item .dropdown .thumb .nav-slideshow .slick-dots li {
+#header .main-header .gnb nav .nav-items .nav-item .dropdown .thumb .nav-slide .slick-dots li {
   display: none;
 }
 #header .main-header .gnb nav .nav-items .nav-item .dropdown .thumb p {
@@ -845,14 +840,13 @@ main .contents {
   width: 100%;
 }
 main .contents h1 {
-  font-size: 21px;
+  font-size: 20px;
 }
 main .contents .login {
   width: 292px;
   height: 695px;
   background-color: #888;
   color: #fff;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -948,7 +942,7 @@ main .contents .login .login-desc p {
   padding-top: 20px;
 }
 main .contents .card-guide {
-  width: 613px;
+  width: 590px;
   border: 1px solid #d5d3d3;
 }
 main .contents .card-guide .card-application {
@@ -983,34 +977,34 @@ main .contents .card-guide .card-application .title .links a.bar:after {
   top: 3px;
   right: 0;
 }
-main .contents .card-guide .card-application .card-slideshow {
-  width: 589px;
+main .contents .card-guide .card-application .card-slide {
+  position: relative;
   margin: 0 -15px;
 }
-main .contents .card-guide .card-application .card-slideshow .item {
+main .contents .card-guide .card-application .card-slide .item {
   position: relative;
-  padding: 15px;
   cursor: pointer;
+  padding: 10px;
 }
-main .contents .card-guide .card-application .card-slideshow .item span {
+main .contents .card-guide .card-application .card-slide .item span {
   position: absolute;
-  bottom: 20%;
-  left: 12%;
+  top: 238px;
+  left: 17px;
   background-color: rgba(0, 0, 0, 0.56);
   color: #fff;
   border-radius: 3px;
   padding: 4px;
   font-size: 11px;
 }
-main .contents .card-guide .card-application .card-slideshow .item p {
-  margin: 15px 0;
+main .contents .card-guide .card-application .card-slide .item p {
+  margin-top: 15px;
   font-size: 15px;
 }
-main .contents .card-guide .card-application .card-slideshow .item p:hover {
+main .contents .card-guide .card-application .card-slide .item p:hover {
   color: #0088cc;
 }
-main .contents .card-guide .card-application .card-slideshow .slick-dots {
-  top: 97%;
+main .contents .card-guide .card-application .card-slide .slick-dots {
+  top: 103%;
 }
 main .contents .card-guide .card-benefits {
   height: 283px;
@@ -1018,7 +1012,7 @@ main .contents .card-guide .card-benefits {
   border-top: 1px solid #d5d3d3;
 }
 main .contents .card-guide .card-benefits .item {
-  flex: 1;
+  width: 294px;
   padding: 27px 37px;
 }
 main .contents .card-guide .card-benefits .item.line {
@@ -1037,7 +1031,7 @@ main .contents .card-guide .card-benefits a:hover {
   color: #0088cc;
 }
 main .contents .bank-guide {
-  width: 273px;
+  width: 295px;
   height: 695px;
   border: 1px solid #d5d3d3;
   border-left: none;
@@ -1045,23 +1039,20 @@ main .contents .bank-guide {
   overflow: hidden;
 }
 main .contents .bank-guide h1 {
-  font-size: 21px;
+  font-size: 20px;
   color: #333;
   margin-bottom: 15px;
 }
-main .contents .bank-guide .bank-slideshow {
-  width: 220px;
+main .contents .bank-guide .bank-slide .item img {
+  width: 240px;
 }
-main .contents .bank-guide .bank-slideshow .item img {
-  width: 100%;
-}
-main .contents .bank-guide .bank-slideshow .item p {
+main .contents .bank-guide .bank-slide .item p {
   padding-top: 10px;
   font-size: 13px;
   color: #333;
   line-height: 1.2;
 }
-main .contents .bank-guide .bank-slideshow .item p:hover {
+main .contents .bank-guide .bank-slide .item p:hover {
   color: #0088cc;
 }
 main .contents .bank-guide .bank-list {
@@ -1097,10 +1088,10 @@ main .seconds-area {
   border-top: none;
 }
 main .seconds-area.culture {
-  width: 294px;
+  width: 292px;
 }
 main .seconds-area.service {
-  width: 306px;
+  width: 294px;
   border-left: none;
   border-right: none;
 }
@@ -1140,11 +1131,11 @@ main .seconds-area.service p a {
   border-bottom: 1px solid #0088cc;
 }
 main .seconds-area.digital-project {
-  width: 306px;
+  width: 295px;
   border-right: none;
 }
 main .seconds-area.event {
-  width: 274px;
+  width: 296px;
 }
 main .seconds-area.event img {
   height: 135px;
@@ -1236,12 +1227,12 @@ main .notice-box .slide-container .item .tit:hover {
   color: #000;
 }
 
-.visual .visual-slideshow .item {
+.visual .visual-slide .item {
   background-position: center;
   background-size: cover;
   height: 100vh;
 }
-.visual .visual-slideshow .item .desc {
+.visual .visual-slide .item .description {
   color: #fff;
   height: 100vh;
   display: flex;
@@ -1250,19 +1241,25 @@ main .notice-box .slide-container .item .tit:hover {
   align-items: flex-start;
   margin-left: 200px;
 }
-.visual .visual-slideshow .item .desc h2 {
+.visual .visual-slide .item .description.text1 {
+  text-align: center;
+}
+.visual .visual-slide .item .description.em {
+  color: #f0f5f9;
+}
+.visual .visual-slide .item .description h2 {
   font-size: 55px;
   line-height: 1.2;
   margin-bottom: 20px;
   opacity: 0;
 }
-.visual .visual-slideshow .item .desc p {
+.visual .visual-slide .item .description p {
   font-size: 20px;
   line-height: 1.5;
   opacity: 0;
   animation-delay: 0.2s;
 }
-.visual .visual-slideshow .item .desc .btn {
+.visual .visual-slide .item .description .btn {
   width: 200px;
   display: flex;
   justify-content: center;
@@ -1285,15 +1282,15 @@ main .notice-box .slide-container .item .tit:hover {
     transform: none;
   }
 }
-.visual .visual-slideshow .fadeInUp {
+.visual .visual-slide .fadeInUp {
   animation-name: fadeInUp;
-  animation-duration: 0.6s;
+  animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-.visual .visual-slideshow .img1 {
+.visual .visual-slide .img1 {
   background-image: url("../images/visual_life_main_pc_200518.jpg");
 }
-.visual .visual-slideshow .img1 .text1 {
+.visual .visual-slide .img1 .text1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1301,28 +1298,28 @@ main .notice-box .slide-container .item .tit:hover {
   text-align: center;
   margin-left: 0;
 }
-.visual .visual-slideshow .img2 {
+.visual .visual-slide .img2 {
   background-image: url("../images/visual_life_main_190920.jpg");
 }
-.visual .visual-slideshow .img3 {
+.visual .visual-slide .img3 {
   background-image: url("../images/visual_life_main_200102.jpg");
 }
-.visual .visual-slideshow .img3 .text3 a {
+.visual .visual-slide .img3 .text3 a {
   color: #e1f9f5;
 }
-.visual .visual-slideshow .img4 {
+.visual .visual-slide .img4 {
   background-image: url("../images/visual_life_main_190523.jpg");
 }
-.visual .visual-slideshow .img5 {
+.visual .visual-slide .img5 {
   background-image: url("../images/visual_life_main_180816.png");
 }
-.visual .visual-slideshow .img6 {
+.visual .visual-slide .img6 {
   background-image: url("../images/visual_life_main_PC_180305.jpg");
 }
-.visual .visual-slideshow .img7 {
+.visual .visual-slide .img7 {
   background-image: url("../images/visual_life_main_6.jpg");
 }
-.visual .visual-slideshow .slick-dots {
+.visual .visual-slide .slick-dots {
   bottom: 10%;
 }
 

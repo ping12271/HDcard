@@ -6,14 +6,13 @@ main {
     display: flex;
     width: 100%;
     h1 {
-      font-size: 21px;
+      font-size: 20px;
     }
     .login {
       width: 292px;
       height: 695px;
       background-color: #888;
       color: #fff;
-      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -113,7 +112,7 @@ main {
     }
 
     .card-guide {
-      width: 613px;
+      width: 590px;
       border: 1px solid #d5d3d3;
       .card-application {
         height: 410px;
@@ -146,17 +145,17 @@ main {
             }
           }
         }
-        .card-slideshow {
-          width: 589px;
+        .card-slide {
+          position: relative;
           margin: 0 -15px;
           .item {
             position: relative;
-            padding: 15px;
             cursor: pointer;
+            padding: 10px;
             span {
               position: absolute;
-              bottom: 20%;
-              left: 12%;
+              top: 238px;
+              left: 17px;
               background-color: rgba(0, 0, 0, 0.56);
               color: #fff;
               border-radius: 3px;
@@ -164,7 +163,7 @@ main {
               font-size: 11px;
             }
             p {
-              margin: 15px 0;
+              margin-top: 15px;
               font-size: 15px;
               &:hover {
                 color: #0088cc;
@@ -172,7 +171,7 @@ main {
             }
           }
           .slick-dots {
-            top: 97%;
+            top: 103%;
           }
         }
       }
@@ -182,7 +181,7 @@ main {
         display: flex;
         border-top: 1px solid #d5d3d3;
         .item {
-          flex: 1;
+          width: 294px;
           padding: 27px 37px;
           &.line {
             border-right: 1px solid #d5d3d3;
@@ -206,22 +205,21 @@ main {
     }
 
     .bank-guide {
-      width: 273px;
+      width: 295px;
       height: 695px;
       border: 1px solid #d5d3d3;
       border-left: none;
       padding: 37px 27px;
       overflow: hidden;
       h1 {
-        font-size: 21px;
+        font-size: 20px;
         color: #333;
         margin-bottom: 15px;
       }
-      .bank-slideshow {
-        width: 220px;
+      .bank-slide {
         .item {
           img {
-            width: 100%;
+            width: 240px;
           }
           p {
             padding-top: 10px;
@@ -273,10 +271,10 @@ main {
     border: 1px solid #d5d3d3;
     border-top: none;
     &.culture {
-      width: 294px;
+      width: 292px;
     }
     &.service {
-      width: 306px;
+      width: 294px;
       border-left: none;
       border-right: none;
       .center {
@@ -285,7 +283,6 @@ main {
           li {
             background-color: rgba(147, 145, 145, 0.17);
             border: 1px solid #fff;
-
             a {
               display: flex;
               justify-content: center;
@@ -320,11 +317,11 @@ main {
       }
     }
     &.digital-project {
-      width: 306px;
+      width: 295px;
       border-right: none;
     }
     &.event {
-      width: 274px;
+      width: 296px;
       img {
         height: 135px;
       }

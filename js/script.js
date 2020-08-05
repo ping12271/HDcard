@@ -4,8 +4,6 @@ $(function () {
 var hyundaicard = {
     init: function () {
         hyundaicard.slide();
-        hyundaicard.fadeSlide();
-        hyundaicard.navSlide();
         hyundaicard.getScroll();
         hyundaicard.toggleClass();
         hyundaicard.handleInfo();
@@ -14,17 +12,22 @@ var hyundaicard = {
     },
 
     slide: function () {
-        $('.card-slideshow').slick({
+        $('.card-slide').slick({
             autoplay: true,
-            speed: 2000,
+            speed: 500,
             slidesToShow: 3,
             slidesToScroll: 3,
             arrows: false,
             dots: true,
         });
-    },
-
-    fadeSlide: function () {
+        $('.nav-slide,.visual-slide,.bank-slide,.culture-slide,.digital-slide,.event-slide').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            speed: 500,
+            fade: true,
+        });
         var slickCustomEvent = {
             init : function(){
                 slickCustomEvent.initialize()
@@ -36,27 +39,20 @@ var hyundaicard = {
                 dataIndex.find('h2,p,.btn').addClass('fadeInUp');
             },
             beforeChange : function(){
-                $('.visual-slideshow').on('beforeChange', function(event, slick, currentSlide){
+                $('.visual-slide').on('beforeChange', function(event, slick, currentSlide){
                     $('h2,p,.btn').removeClass('fadeInUp');
                 })
             },
             afterChange : function(){
-                $('.visual-slideshow').on('afterChange', function(event, slick, currentSlide){
+                $('.visual-slide').on('afterChange', function(event, slick, currentSlide){
                     var dataIndex = $('[data-slick-index="' + currentSlide + '"');
                     dataIndex.find('h2,p,.btn').addClass('fadeInUp');
                 });
             }
         }
-        slickCustomEvent.init()
-        $('.nav-slideshow,.visual-slideshow, .bank-slideshow,.culture-slideshow,.digital-slideshow,.event-slideshow').slick({
-            dots: true,
-            arrows: false,
-            infinite: true,
-            autoplay: true,
-            speed: 1000,
-            fade: true,
-        });
-        $('.notice-slideshow').slick({
+        slickCustomEvent.init();
+
+        $('.notice-slide').slick({
             autoplay: true,
             dots: false,
             arrows: true,
@@ -66,9 +62,6 @@ var hyundaicard = {
             prevArrow: $('.slick-prev'),
             nextArrow: $('.slick-next'),
         });
-    },
-
-    navSlide: function () {
         $('.gallery-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -83,7 +76,6 @@ var hyundaicard = {
             centerMode: true,
             focusOnSelect: true
         });
-
     },
 
     getScroll: function () {
@@ -151,4 +143,4 @@ var hyundaicard = {
         }).eq(0).trigger('click');
     }
 
-};
+    };
