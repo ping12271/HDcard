@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'YouandiModern';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Youandi_Modern_TextRegular.woff2) format('woff2'), url(Youandi_Modern_TextRegular.woff) format('woff');
+}
+@font-face {
+    font-family: 'YouandiModern';
+    font-style: normal;
+    font-weight: 600;
+    src: url(Youandi_Modern_TextBold.woff2) format('woff2'),/* 2019-08-19 woff2 추가 */
+    url(Youandi_Modern_TextBold.woff) format('woff');
+}
+@font-face {
+    font-family:'YouandiModern';
+    font-style: normal;
+    font-weight: 800;
+    src: url(Youandi_Modern_HeadExtraBold.woff2) format('woff2'),/* 2019-08-19 woff2 추가 */
+    url(Youandi_Modern_HeadExtraBold.woff) format('woff');
+}
+
+.font-hd {
+    font-family: 'YouandiModern', 'sans-serif';
+}

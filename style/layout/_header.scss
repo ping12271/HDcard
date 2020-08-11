@@ -1,5 +1,5 @@
 #header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -19,16 +19,18 @@
       display: flex;
       align-items: center;
       height: 30px;
+      margin-right: -10px;
       a {
         display: flex;
         padding: 0 10px;
         color: #666;
-        font-size: 12px;
+        font-size: 11px;
         &.login {
-          border: 1px solid #999;
-          padding: 4px 5px 5px 5px;
+          border: 1px solid #c2c2c2;
+          padding: 3px 7px 4px;
         }
-        &.em, &:hover {
+        &.em,
+        &:hover {
           color: #000;
         }
         &.bar {
@@ -39,9 +41,9 @@
             content: '';
             width: 1px;
             height: 10px;
-            background-color: #666;
+            background-color: #c2c2c2;
             position: absolute;
-            top: 2px;
+            top: 0;
             right: 0;
           }
         }
@@ -51,7 +53,7 @@
   .main-header {
     position: relative;
     border-bottom: 1px solid #d5d3d3;
-    > .container {
+    >.container {
       display: flex;
       align-items: center;
     }
@@ -61,7 +63,7 @@
     .gnb {
       display: flex;
       flex: 1;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       nav {
         flex: 1;
@@ -72,7 +74,7 @@
             &:hover {
               .dropdown {
                 max-height: 1000px;
-                transition: 0.7s;
+                transition: 2s;
               }
             }
             .nav-link {
@@ -82,13 +84,12 @@
               align-items: center;
               height: 72px;
               color: #000;
-              font-size: 13px;
-              font-weight: 400;
+              font-size: 14px;
               padding: 0 13px;
               border-bottom: 1px solid transparent;
               &:hover {
-                color: #0088cc;
-                border-bottom: 1px solid #0088cc;
+                color: #1f75d6;
+                border-bottom: 1px solid #1f75d6;
               }
             }
 
@@ -123,7 +124,7 @@
                 a {
                   color: #888;
                   &:hover {
-                    color: #0088cc;
+                    color: #1f75d6;
                   }
                 }
               }
@@ -151,8 +152,8 @@
                   }
                 }
                 .sub-category {
-                  font-size: 13px;
-                  font-weight: 500;
+                  font-size: 12px;
+                  font-weight: 600;
                   color: #000;
                   margin-bottom: 7px;
                   &.second {
@@ -165,7 +166,7 @@
                   display: flex;
                   padding: 7px 0;
                   &:hover {
-                    color: #1e75d6;
+                    color: #1f75d6;
                   }
                 }
               }
@@ -173,16 +174,10 @@
           }
         }
       }
-
       .btn-search {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        i {
-          font-size: 24px;
-          color: #999;
-        }
+        width: 24px;
+        height: 24px;
+        background: url("../images/sp_btn_icon.png") -180px 0 no-repeat;
       }
     }
   }

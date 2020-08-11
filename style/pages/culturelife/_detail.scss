@@ -31,7 +31,7 @@
 }
 
 .cooking-slide {
-  padding-top: 200px;
+  padding-top: 100px;
   .description {
     text-align: center;
     margin-bottom: 50px;
@@ -48,29 +48,28 @@
       }
     }
     p {
-      font-size: 25px;
+      font-size: 21px;
     }
     p.gray {
       font-size: 15px;
-      color: #777;
-      line-height: 1.5;
+      color: #666;
+      line-height: 24px;
       margin: 15px 0;
     }
     a {
-      color: #0088cc;
+      font-size: 13px;
+      color: #1e75d6;
       &:hover {
-        border-bottom: 1px solid #0088cc;
+        border-bottom: 1px solid #1e75d6;
       }
     }
   }
   .gallery {
-    width: 1000px;
-    margin: 0 auto;
+    width: 1032px;
     .gallery-nav {
       .slick-list {
         padding: 0 !important;
         margin: 10px -10px;
-
         .slick-track > div {
           padding: 10px;
         }
@@ -97,8 +96,8 @@
       }
       p {
         flex: 1 1 70%;
-        font-size: 14px;
-        color: #888;
+        font-size: 13px;
+        color: #666;
         line-height: 1.8;
       }
     }

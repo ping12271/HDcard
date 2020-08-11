@@ -1,14 +1,18 @@
 html, body {height:100%;}
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'YouandiModern', 'Noto Sans KR', sans-serif;
     word-break: keep-all;
 }
 
+#wrap {
+    min-width: 1414px;
+}
 .container {
-    max-width: 1210px;
+    width: 1414px;
     margin: 0 auto;
     padding: 0 15px;
+    overflow: hidden;
 }
 .container-sm {
     width: 1056px;
@@ -21,8 +25,8 @@ body {
     position: relative;
     .slick-dots {
         position: absolute;
-        bottom: -20%;
         left: 50%;
+        bottom: -10%;
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
