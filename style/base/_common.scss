@@ -12,7 +12,6 @@ body {
     width: 1414px;
     margin: 0 auto;
     padding: 0 15px;
-    overflow: hidden;
 }
 .container-sm {
     width: 1056px;
@@ -21,7 +20,8 @@ body {
 
 
 //main-fade 슬라이드
-.slideshow {
+.card-slide,
+.slider {
     position: relative;
     .slick-dots {
         position: absolute;
@@ -31,10 +31,10 @@ body {
         display: flex;
         justify-content: center;
         li {
-            width: 8px;
-            height: 8px;
+            width: 9px;
+            height: 9px;
             border-radius: 50%;
-            background: #ddd;
+            border: 1px solid #ddd;
             margin: 0 5px;
             &.slick-active {
                 background: #888;
@@ -45,6 +45,37 @@ body {
         }
     }
 }
+.card-slide-container,
+.slick-container {
+    position: relative;
+    .ctrl {
+        background: url("../images/sp_arrow.png") no-repeat;
+        position: absolute;
+        bottom: -19px;
+        left: 32%;
+        display: flex;
+        &.pause {
+            .btn-pause {
+                display: none;
+            }
+            .btn-play {
+                display: block;
+            }
+        }
+        .btn-pause {
+            width: 8px;
+            height: 8px;
+            background-position: -40px 0;
+        }
+        .btn-play {
+            width: 8px;
+            height: 8px;
+            background-position: -50px 0;
+            display: none;
+        }
+    }
+}
+
 
 .back-top {
     position: fixed;

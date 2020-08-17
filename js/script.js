@@ -9,26 +9,40 @@ var hyundaicard = {
         hyundaicard.handleInfo();
         hyundaicard.backTop();
         hyundaicard.tabMenu();
+        hyundaicard.moveToNextSection();
     },
 
     slide: function () {
         $('.card-slide').slick({
             autoplay: true,
-            speed: 500,
+            arrows: false,
+            speed: 0,
+            dots: true,
+            infinite: true,
             slidesToShow: 3,
             slidesToScroll: 3,
-            arrows: false,
-            dots: true,
+            cssEase: 'linear'
         });
-        $('.nav-slide,.visual-slide,.bank-slide,.culture-slide,.digital-slide,.event-slide').slick({
+
+        $('.slider').slick({
             dots: true,
             arrows: false,
             infinite: true,
             autoplay: true,
-            speed: 500,
+            speed: 1000,
             fade: true,
         });
-        var slickCustomEvent = {
+
+        $('.btn-pause').on('click', function () {
+            $(this).closest('.card-slide-container,.slick-container').find('.card-slide,.slider').slick('slickPause');
+            $(this).closest('.card-slide-container,.slick-container').find('.ctrl').addClass('pause');
+        });
+        $('.btn-play').on('click', function () {
+            $(this).closest('.card-slide-container,.slick-container').find('.card-slide,.slider').slick('slickPlay');
+            $(this).closest('.card-slide-container,.slick-container').find('.ctrl').removeClass('pause');
+        });
+
+        const slickCustomEvent = {
             init : function(){
                 slickCustomEvent.initialize()
                 slickCustomEvent.beforeChange()
@@ -39,12 +53,12 @@ var hyundaicard = {
                 dataIndex.find('h2,p,.btn').addClass('fadeInUp');
             },
             beforeChange : function(){
-                $('.visual-slide').on('beforeChange', function(event, slick, currentSlide){
+                $('.fadeInUp').on('beforeChange', function(event, slick, currentSlide){
                     $('h2,p,.btn').removeClass('fadeInUp');
                 })
             },
             afterChange : function(){
-                $('.visual-slide').on('afterChange', function(event, slick, currentSlide){
+                $('.fadeInUp').on('afterChange', function(event, slick, currentSlide){
                     var dataIndex = $('[data-slick-index="' + currentSlide + '"');
                     dataIndex.find('h2,p,.btn').addClass('fadeInUp');
                 });
@@ -57,11 +71,12 @@ var hyundaicard = {
             dots: false,
             arrows: true,
             infinite: true,
-            speed: 500,
+            speed: 1000,
             fade: true,
             prevArrow: $('.slick-prev'),
             nextArrow: $('.slick-next'),
         });
+
         $('.gallery-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -69,6 +84,7 @@ var hyundaicard = {
             fade: true,
             asNavFor: '.gallery-nav'
         });
+
         $('.gallery-nav').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -92,8 +108,7 @@ var hyundaicard = {
             } else {
                 $('html').removeClass('show-backtop');
             }
-        })
-
+        });
     },
 
     handleInfo: function () {
@@ -111,10 +126,8 @@ var hyundaicard = {
 
     backTop: function () {
         $('.back-top').on('click', function () {
-            $('html, body').animate({
-                scrollTop:0
-            },400)
-        })
+            $('html, body').animate({scrollTop: 0},400)
+        });
     },
 
     toggleClass: function () {
@@ -141,6 +154,18 @@ var hyundaicard = {
             const index = $(this).index();
             $('.board').eq(index).show().siblings().hide();
         }).eq(0).trigger('click');
+    },
+
+    moveToNextSection: function () {
+        $('.visual-slide').on('mousewheel', function (event) {
+            console.log(event.deltaY);
+            if(event.deltaY < 0) {
+                console.log("@@ 휠을 아래로")
+                const nextSection = $(this).closest('section').next('section');
+                const nextOft = nextSection.offset().top;
+                $('html, body').stop().animate({scrollTop: nextOft});
+            }
+        });
     }
 
-    };
+};

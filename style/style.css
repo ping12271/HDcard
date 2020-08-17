@@ -462,7 +462,6 @@ body {
   width: 1414px;
   margin: 0 auto;
   padding: 0 15px;
-  overflow: hidden;
 }
 
 .container-sm {
@@ -470,10 +469,12 @@ body {
   margin: 0 auto;
 }
 
-.slideshow {
+.card-slide,
+.slider {
   position: relative;
 }
-.slideshow .slick-dots {
+.card-slide .slick-dots,
+.slider .slick-dots {
   position: absolute;
   left: 50%;
   bottom: -10%;
@@ -481,17 +482,54 @@ body {
   display: flex;
   justify-content: center;
 }
-.slideshow .slick-dots li {
-  width: 8px;
-  height: 8px;
+.card-slide .slick-dots li,
+.slider .slick-dots li {
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: #ddd;
+  border: 1px solid #ddd;
   margin: 0 5px;
 }
-.slideshow .slick-dots li.slick-active {
+.card-slide .slick-dots li.slick-active,
+.slider .slick-dots li.slick-active {
   background: #888;
 }
-.slideshow .slick-dots li button {
+.card-slide .slick-dots li button,
+.slider .slick-dots li button {
+  display: none;
+}
+
+.card-slide-container,
+.slick-container {
+  position: relative;
+}
+.card-slide-container .ctrl,
+.slick-container .ctrl {
+  background: url("../images/sp_arrow.png") no-repeat;
+  position: absolute;
+  bottom: -19px;
+  left: 32%;
+  display: flex;
+}
+.card-slide-container .ctrl.pause .btn-pause,
+.slick-container .ctrl.pause .btn-pause {
+  display: none;
+}
+.card-slide-container .ctrl.pause .btn-play,
+.slick-container .ctrl.pause .btn-play {
+  display: block;
+}
+.card-slide-container .ctrl .btn-pause,
+.slick-container .ctrl .btn-pause {
+  width: 8px;
+  height: 8px;
+  background-position: -40px 0;
+}
+.card-slide-container .ctrl .btn-play,
+.slick-container .ctrl .btn-play {
+  width: 8px;
+  height: 8px;
+  background-position: -50px 0;
   display: none;
 }
 
@@ -523,10 +561,9 @@ body {
   z-index: 1000;
   background-color: #fff;
   transition: 0.2s;
-  transform: none;
 }
 .get-scroll #header {
-  transform: translateY(-100%);
+  margin-top: -103px;
 }
 #header .top-header .container {
   display: flex;
@@ -1016,17 +1053,33 @@ main .contents .card-guide .card-application .title .links a.bar:after {
   top: 0;
   right: -8px;
 }
-main .contents .card-guide .card-application .card-slide {
+main .contents .card-guide .card-application .card-slide-container {
   position: relative;
 }
-main .contents .card-guide .card-application .card-slide .item {
+main .contents .card-guide .card-application .card-slide-container .ctrl {
+  bottom: -27px;
+  left: 42%;
+}
+main .contents .card-guide .card-application .card-slide-container .slick-slide {
+  opacity: 0.3;
+  transition: opacity 0.5s ease-in-out;
+}
+main .contents .card-guide .card-application .card-slide-container .slick-current {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+main .contents .card-guide .card-application .card-slide-container .slick-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+main .contents .card-guide .card-application .card-slide-container .item {
   position: relative;
   cursor: pointer;
 }
-main .contents .card-guide .card-application .card-slide .item img {
+main .contents .card-guide .card-application .card-slide-container .item img {
   width: 152px;
 }
-main .contents .card-guide .card-application .card-slide .item span {
+main .contents .card-guide .card-application .card-slide-container .item span {
   position: absolute;
   top: 215px;
   left: 6px;
@@ -1036,16 +1089,13 @@ main .contents .card-guide .card-application .card-slide .item span {
   padding: 4px;
   font-size: 11px;
 }
-main .contents .card-guide .card-application .card-slide .item p {
+main .contents .card-guide .card-application .card-slide-container .item p {
   margin-top: 15px;
   font-size: 15px;
   letter-spacing: -1px;
 }
-main .contents .card-guide .card-application .card-slide .item p:hover {
+main .contents .card-guide .card-application .card-slide-container .item p:hover {
   color: #0088cc;
-}
-main .contents .card-guide .card-application .card-slide .slick-dots {
-  bottom: -12%;
 }
 main .contents .card-guide .card-benefits {
   height: 282px;
@@ -1101,6 +1151,10 @@ main .contents .bank-guide .bank-slide .item p {
 }
 main .contents .bank-guide .bank-slide .item p:hover {
   color: #0088cc;
+}
+main .contents .bank-guide .bank-slide .ctrl {
+  bottom: -26px;
+  left: 32%;
 }
 main .contents .bank-guide .bank-list {
   width: 218px;
@@ -1337,7 +1391,7 @@ main .notice-box .slide-container .item .tit:hover {
 }
 .visual .visual-slide .fadeInUp {
   animation-name: fadeInUp;
-  animation-duration: 0.5s;
+  animation-duration: 0.6s;
   animation-fill-mode: both;
 }
 .visual .visual-slide .img1 {
@@ -1373,7 +1427,14 @@ main .notice-box .slide-container .item .tit:hover {
   background-image: url("../images/visual_life_main_6.jpg");
 }
 .visual .visual-slide .slick-dots {
-  bottom: 10%;
+  bottom: 30px;
+}
+.visual .visual-slide .slick-dots li.slick-active {
+  background: #fff;
+}
+.visual .visual-slide .ctrl {
+  bottom: 30px;
+  left: 44%;
 }
 
 .section-culture {

@@ -6,9 +6,8 @@
   z-index: 1000;
   background-color: #fff;
   transition: 0.2s;
-  transform: none;
   .get-scroll & {
-    transform: translateY(-100%);
+    margin-top: -103px;
   }
   .top-header {
     .container {

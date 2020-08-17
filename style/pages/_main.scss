@@ -150,8 +150,24 @@ main {
             }
           }
         }
-        .card-slide {
+        .card-slide-container {
           position: relative;
+          .ctrl {
+            bottom: -27px;
+            left: 42%;
+          }
+          .slick-slide {
+            opacity: .3;
+            transition: opacity .5s ease-in-out;
+          }
+          .slick-current {
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
+          }
+          .slick-active {
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
+          }
           .item {
             position: relative;
             cursor: pointer;
@@ -176,9 +192,6 @@ main {
                 color: #0088cc;
               }
             }
-          }
-          .slick-dots {
-            bottom: -12%;
           }
         }
       }
@@ -243,6 +256,10 @@ main {
               color: #0088cc;
             }
           }
+        }
+        .ctrl {
+          bottom: -26px;
+          left: 32%;
         }
       }
       .bank-list {
