@@ -3,16 +3,16 @@ $(function () {
 })
 var hyundaicard = {
     init: function () {
-        hyundaicard.slide();
+        hyundaicard.slider();
         hyundaicard.getScroll();
-        hyundaicard.toggleClass();
+        hyundaicard.toggle();
         hyundaicard.handleInfo();
         hyundaicard.backTop();
         hyundaicard.tabMenu();
         hyundaicard.moveToNextSection();
     },
 
-    slide: function () {
+    slider: function () {
         $('.card-slide').slick({
             autoplay: true,
             arrows: false,
@@ -67,11 +67,11 @@ var hyundaicard = {
         slickCustomEvent.init();
 
         $('.notice-slide').slick({
-            autoplay: true,
+            autoplay: false,
             dots: false,
             arrows: true,
             infinite: true,
-            speed: 1000,
+            speed: 500,
             fade: true,
             prevArrow: $('.slick-prev'),
             nextArrow: $('.slick-next'),
@@ -130,15 +130,15 @@ var hyundaicard = {
         });
     },
 
-    toggleClass: function () {
+    toggle: function () {
         $('.que').on('click', function () {
-            $(this).siblings('.answer').slideToggle();
-            $(this).find('.icon').toggleClass('show');
+            $(this).next('.answer').slideToggle(500);
+            $(this).find('p, .icon').toggleClass('is-active');
         });
 
         $('.more-btn').on('click', function () {
             $(this).addClass('active');
-            $('.more').addClass('active');
+            $('.more-que').addClass('active');
         });
 
         $('.site .name').on('click', function () {
@@ -148,9 +148,10 @@ var hyundaicard = {
     },
 
     tabMenu: function () {
-        $('.section-faq.menu li').on('click', function () {
-            $(this).children('a').addClass('is_active');
-            $(this).siblings().children('a').removeClass('is_active');
+        $('.tab-menu li').on('click', function () {
+            $(this).addClass('is-active');
+            $(this).siblings().removeClass('is-active');
+
             const index = $(this).index();
             $('.board').eq(index).show().siblings().hide();
         }).eq(0).trigger('click');
