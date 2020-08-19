@@ -33,13 +33,15 @@ var hyundaicard = {
             fade: true,
         });
 
-        $('.btn-pause').on('click', function () {
-            $(this).closest('.card-slide-container,.slick-container').find('.card-slide,.slider').slick('slickPause');
-            $(this).closest('.card-slide-container,.slick-container').find('.ctrl').addClass('pause');
-        });
-        $('.btn-play').on('click', function () {
-            $(this).closest('.card-slide-container,.slick-container').find('.card-slide,.slider').slick('slickPlay');
-            $(this).closest('.card-slide-container,.slick-container').find('.ctrl').removeClass('pause');
+        $('.ctrl').on('click', function () {
+            const pause = $(this).hasClass('pause');
+            if(pause) {
+                $(this).closest('.card-slide-container,.slick-container').find('.card-slide,.slider').slick('slickPause');
+                $(this).removeClass('pause');
+            } else {
+                $(this).closest('.card-slide-container,.slick-container').find('.card-slide,.slider').slick('slickPlay');
+                $(this).addClass('pause');
+            }
         });
 
         const slickCustomEvent = {
@@ -159,9 +161,7 @@ var hyundaicard = {
 
     moveToNextSection: function () {
         $('.visual-slide').on('mousewheel', function (event) {
-            console.log(event.deltaY);
             if(event.deltaY < 0) {
-                console.log("@@ 휠을 아래로")
                 const nextSection = $(this).closest('section').next('section');
                 const nextOft = nextSection.offset().top;
                 $('html, body').stop().animate({scrollTop: nextOft});

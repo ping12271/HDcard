@@ -505,32 +505,19 @@ body {
 }
 .card-slide-container .ctrl,
 .slick-container .ctrl {
+  width: 8px;
+  height: 8px;
   background: url("../images/sp_arrow.png") no-repeat;
   position: absolute;
-  bottom: -19px;
-  left: 32%;
   display: flex;
 }
-.card-slide-container .ctrl.pause .btn-pause,
-.slick-container .ctrl.pause .btn-pause {
-  display: none;
+.card-slide-container .ctrl.pause,
+.slick-container .ctrl.pause {
+  background-position: 0 0;
 }
-.card-slide-container .ctrl.pause .btn-play,
-.slick-container .ctrl.pause .btn-play {
-  display: block;
-}
-.card-slide-container .ctrl .btn-pause,
-.slick-container .ctrl .btn-pause {
-  width: 8px;
-  height: 8px;
-  background-position: -40px 0;
-}
-.card-slide-container .ctrl .btn-play,
-.slick-container .ctrl .btn-play {
-  width: 8px;
-  height: 8px;
-  background-position: -50px 0;
-  display: none;
+.card-slide-container .ctrl:not(.pause),
+.slick-container .ctrl:not(.pause) {
+  background-position: -9px 0;
 }
 
 .back-top {
@@ -1140,6 +1127,10 @@ main.main-page .contents .bank-guide h1 {
 main.main-page .contents .bank-guide .bank-slide .slick-dots {
   bottom: -14%;
 }
+main.main-page .contents .bank-guide .bank-slide .ctrl {
+  bottom: -26px;
+  left: 33%;
+}
 main.main-page .contents .bank-guide .bank-slide .item img {
   width: 240px;
 }
@@ -1152,10 +1143,6 @@ main.main-page .contents .bank-guide .bank-slide .item p {
 }
 main.main-page .contents .bank-guide .bank-slide .item p:hover {
   color: #0088cc;
-}
-main.main-page .contents .bank-guide .bank-slide .ctrl {
-  bottom: -26px;
-  left: 32%;
 }
 main.main-page .contents .bank-guide .bank-list {
   width: 218px;
@@ -1260,6 +1247,10 @@ main.main-page .seconds-area .item p {
 main.main-page .seconds-area .item p:hover {
   color: #0088cc;
 }
+main.main-page .seconds-area .slick-container .ctrl {
+  bottom: -18px;
+  left: 31%;
+}
 main.main-page .notice-box {
   position: relative;
   height: 50px;
@@ -1308,6 +1299,27 @@ main.main-page .notice-box .slide-container .item {
 }
 main.main-page .notice-box .slide-container .item .tit:hover {
   color: #0088cc;
+}
+
+.quick-links {
+  min-width: 200px;
+  position: fixed;
+  right: 0;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px 38px 20px 21px;
+  box-shadow: -10px 12px 13px -12px rgba(0, 0, 0, 0.3);
+}
+.quick-links a {
+  display: flex;
+  padding: 10px;
+  font-size: 12px;
+  color: #666;
+}
+.quick-links a:hover {
+  color: #1e75d6;
 }
 
 .page-title {
