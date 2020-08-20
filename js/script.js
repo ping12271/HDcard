@@ -1,7 +1,7 @@
 $(function () {
     hyundaicard.init();
 })
-var hyundaicard = {
+const hyundaicard = {
     init: function () {
         hyundaicard.slider();
         hyundaicard.getScroll();
@@ -51,7 +51,7 @@ var hyundaicard = {
                 slickCustomEvent.afterChange()
             },
             initialize : function(){
-                var dataIndex = $('[data-slick-index="0"]');
+                const dataIndex = $('[data-slick-index="0"]');
                 dataIndex.find('h2,p,.btn').addClass('fadeInUp');
             },
             beforeChange : function(){
@@ -61,7 +61,7 @@ var hyundaicard = {
             },
             afterChange : function(){
                 $('.fadeInUp').on('afterChange', function(event, slick, currentSlide){
-                    var dataIndex = $('[data-slick-index="' + currentSlide + '"');
+                    const dataIndex = $('[data-slick-index="' + currentSlide + '"]');
                     dataIndex.find('h2,p,.btn').addClass('fadeInUp');
                 });
             }
@@ -156,7 +156,7 @@ var hyundaicard = {
 
             const index = $(this).index();
             $('.board').eq(index).show().siblings().hide();
-        }).eq(0).trigger('click');
+        }).eq(1).trigger('click');
     },
 
     moveToNextSection: function () {
